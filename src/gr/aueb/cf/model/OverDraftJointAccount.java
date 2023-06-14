@@ -4,11 +4,11 @@ import gr.aueb.cf.exceptions.InsufficientBalanceException;
 import gr.aueb.cf.exceptions.NegativeAmountException;
 import gr.aueb.cf.exceptions.SsnNotValidException;
 
-public class OverDraftAccount extends Account {
+public class OverDraftJointAccount extends JointAccount {
 
-    public OverDraftAccount () {}
+    public OverDraftJointAccount() {}
 
-    public OverDraftAccount(User holder, String iban, double balance) {
+    public OverDraftJointAccount(User holder, String iban, double balance) {
         super(holder, iban, balance);
     }
 
@@ -25,4 +25,6 @@ public class OverDraftAccount extends Account {
             throw e;
         }
     }
+
 }
+
